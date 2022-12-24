@@ -21,7 +21,9 @@ public class mail {
         return this.message;
     }
 
-
+    public String getSender(){
+        return this.sender;
+    }
 
     public Date getDate(){
         return this.date;

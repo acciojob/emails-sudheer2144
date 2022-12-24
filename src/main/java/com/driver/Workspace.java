@@ -17,7 +17,7 @@ public class Workspace extends Gmail{
 
     public void addMeeting(Meeting meeting){
         //add the meeting to calendar
-        this.calendar.add(meeting);
+        calendar.add(meeting);
     }
 
     public int findMaxMeetings(){
@@ -28,7 +28,7 @@ public class Workspace extends Gmail{
         int count=1;
         LocalTime start=calendar.get(0).getStartTime();
         LocalTime end=calendar.get(0).getEndTime();
-        for(Meeting meeting:this.calendar)
+        for(Meeting meeting:calendar)
         {
             if(meeting.getStartTime().isAfter(end)||meeting.getEndTime().isBefore(start))
             {
