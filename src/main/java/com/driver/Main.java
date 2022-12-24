@@ -1,13 +1,11 @@
 package com.driver;
 
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
-
         Email email = new Email("accio@gmail.com");
         email.changePassword("Accio@123", "V12@");
         email.changePassword("Acio@123", "V12@v");
@@ -19,12 +17,10 @@ public class Main {
         gmail.receiveMail(new SimpleDateFormat("dd/MM/yyyy").parse("22/12/2022"), "Abhishek", "Assignment to be uploaded on database.");
         gmail.receiveMail(new SimpleDateFormat("dd/MM/yyyy").parse("23/12/2022"), "Tushar", "Everything looks good.");
 
-
         System.out.println("Total " + gmail.getInboxSize() + " mails in inbox.");
         System.out.println("There are " + gmail.findMailsBetweenDates(new SimpleDateFormat("dd/MM/yyyy").parse("21/12/2022"), new SimpleDateFormat("dd/MM/yyyy").parse("22/12/2022")) + " mails between given dates!");
         gmail.deleteMail("Everything looks good.");
         System.out.println("The latest message is :" + gmail.findLatestMessage());
-        System.out.println("The Oldest message is :" + gmail.findOldestMessage());
         gmail.deleteMail("Assignment to be uploaded on database.");
         System.out.println("There are " + gmail.getTrashSize() + " mails in the trash.");
         gmail.emptyTrash();

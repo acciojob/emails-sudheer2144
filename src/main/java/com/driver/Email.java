@@ -10,8 +10,6 @@ public class Email {
         this.password = "Accio@123";
     }
 
-    public Email(){}
-
     public String getEmailId() {
         return emailId;
     }
