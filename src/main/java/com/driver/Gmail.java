@@ -78,7 +78,7 @@ public class Gmail extends Email {
         int count=0;
         for(mail mail:Inbox)
         {
-            if(mail.date.compareTo(start)>=0 && mail.date.compareTo(end)<=0)
+            if(mail.date.equals(start)||mail.date.equals(end)||(mail.date.after(start)&&mail.date.before(end)))
             {
                 count++;
             }
