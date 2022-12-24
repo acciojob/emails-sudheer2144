@@ -9,9 +9,8 @@ import java.util.Collections;
 public class Workspace extends Gmail{
 
     private ArrayList<Meeting> calendar; // Stores all the meetings
-
+    private int inboxCapacity;
     public Workspace(String emailId) {
-        //super();
         // The inboxCapacity is equal to the maximum value an integer can store.
         this.calendar=new ArrayList<>();
         this.inboxCapacity=Integer.MAX_VALUE;
@@ -40,5 +39,9 @@ public class Workspace extends Gmail{
             }
         }
         return count;
+    }
+
+    public int getInboxCapacity() {
+        return inboxCapacity;
     }
 }
