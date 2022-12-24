@@ -4,11 +4,11 @@ import java.util.*;
 
 public class mail {
 
-    private String sender;
+    String sender;
 
-    private Date date;
+    Date date;
 
-    private String message;
+    String message;
 
     public mail(Date date,String sender,String message)
     {
@@ -21,9 +21,7 @@ public class mail {
         return this.message;
     }
 
-    public String getSender(){
-        return this.sender;
-    }
+
 
     public Date getDate(){
         return this.date;
