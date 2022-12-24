@@ -76,15 +76,16 @@ public class Gmail extends Email {
         //find number of mails in the inbox which are received between given dates
         //It is guaranteed that start date <= end date
         int count=0;
-        for(mail mail: Inbox)
+        for(mail mail:Inbox)
         {
-            Date tmp=mail.getDate();
-            if(end.equals(tmp)||start.equals(tmp)||start.after(tmp)&&end.before(tmp))
+            if(mail.date.compareTo(start)>=0 && mail.date.compareTo(end)<=0)
             {
                 count++;
             }
+
         }
         return count;
+
     }
 
 
