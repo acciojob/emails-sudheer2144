@@ -5,9 +5,7 @@ import java.util.*;
 public class mail {
 
     String sender;
-
     Date date;
-
     String message;
 
     public mail(Date date,String sender,String message)

@@ -23,7 +23,7 @@ public class Email {
         // 1. It contains at least 8 characters
         // 2. It contains at least one uppercase letter
         // 3. It contains at least one lowercase letter
-        // 4. It contains at least one digit
+        // 4. It contains at least one digit.
         // 5. It contains at least one special character. Any character apart from alphabets and digits is a special character
         int len=newPassword.length();
         if(len>=8&&oldPassword.equals(this.password))
